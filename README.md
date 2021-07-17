@@ -1,4 +1,4 @@
-# js-cheet-sheet
+# js-cheat-sheet
 
 # JavaScript
 1. What is the difference between the keywords let and var?
