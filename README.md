@@ -1,5 +1,15 @@
 # js-cheat-sheet
 
+A collection of study materials for frontend development and AI architecture.
+
+## Contents
+
+- [JavaScript](#javascript) — 32 core JS interview questions
+- [React](#react) — 20 React interview questions
+- [Claude Certified Architect Study Guide](./claude-architect-study-guide.md) — Foundations certification exam prep (Claude API, Agent SDK, MCP, Claude Code, prompt engineering)
+
+---
+
 # JavaScript
 1. What is the difference between the keywords let and var?
 2. Are these operations valid : 
