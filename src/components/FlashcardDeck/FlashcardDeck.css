@@ -1,0 +1,223 @@
+.flashcard-deck {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.deck-header {
+  margin-bottom: 28px;
+}
+
+.flashcard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flashcard-counter {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.flashcard-parent-tag {
+  display: inline-block;
+  font-size: 11px;
+  background: rgba(108, 99, 255, 0.15);
+  color: var(--color-accent);
+  border-radius: 99px;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.flashcard-question {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  font-weight: 500;
+  flex: 1;
+}
+
+.flashcard-code-wrapper {
+  transition: opacity 0.2s;
+}
+
+.reveal-btn {
+  background: none;
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  width: 100%;
+}
+
+.reveal-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(108, 99, 255, 0.06);
+}
+
+.flashcard-code {
+  background: #0d1117;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  padding: 16px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.flashcard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.2s ease;
+}
+
+.flashcard-prompt {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.flashcard-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-unknown {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-danger);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn-unknown:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.btn-known {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-success);
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn-known:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+/* Completion screen */
+.flashcard-complete {
+  max-width: 480px;
+  margin: 40px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.complete-icon {
+  font-size: 3rem;
+}
+
+.flashcard-complete h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.complete-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.complete-stats {
+  display: flex;
+  gap: 24px;
+  margin: 8px 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-known .stat-number { color: var(--color-success); }
+.stat-unknown .stat-number { color: var(--color-danger); }
+
+.complete-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  padding: 11px 22px;
+  border-radius: var(--border-radius);
+  border: none;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  padding: 11px 22px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background: none;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-raised);
+  border-color: var(--color-text-muted);
+}
