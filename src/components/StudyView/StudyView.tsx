@@ -1,6 +1,4 @@
 import type { Section, FlashcardItem } from '../../types';
-import MarkdownRenderer from '../MarkdownRenderer/MarkdownRenderer';
-import guideContent from '../../../claude-architect-study-guide.md?raw';
 import './StudyView.css';
 
 interface Props {
@@ -9,14 +7,6 @@ interface Props {
 }
 
 export default function StudyView({ section, questions }: Props) {
-  if (section === 'claude') {
-    return (
-      <div className="study-view">
-        <MarkdownRenderer content={guideContent} />
-      </div>
-    );
-  }
-
   return (
     <div className="study-view">
       <h1 className="study-heading">

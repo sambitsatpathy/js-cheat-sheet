@@ -9,7 +9,6 @@ interface Props {
 const SECTIONS: { id: Section; label: string; count: string }[] = [
   { id: 'javascript', label: 'JavaScript', count: '32 questions' },
   { id: 'react', label: 'React', count: '20 questions' },
-  { id: 'claude', label: 'Claude Architect', count: 'Cert prep' },
 ];
 
 const MODES: Record<Section, { id: Mode; label: string }[]> = {
@@ -20,10 +19,6 @@ const MODES: Record<Section, { id: Mode; label: string }[]> = {
   react: [
     { id: 'study', label: 'Study' },
     { id: 'flashcard', label: 'Flashcards' },
-  ],
-  claude: [
-    { id: 'study', label: 'Study Guide' },
-    { id: 'quiz', label: 'Quiz' },
   ],
 };
 
