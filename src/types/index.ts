@@ -1,5 +1,5 @@
 export type Section = 'javascript' | 'react' | 'claude';
-export type Mode = 'study' | 'flashcard' | 'quiz';
+export type Mode = 'study' | 'flashcard' | 'quiz' | 'codeExamples';
 
 export interface AppView {
   section: Section;
@@ -12,6 +12,16 @@ export interface FlashcardItem {
   code?: string;
   codeLanguage?: string;
   parentId?: string;
+}
+
+export interface CodeExample {
+  id: string;
+  topic: string;
+  title: string;
+  description: string;
+  code: string;
+  language: string;
+  keyPoints: string[];
 }
 
 export interface QuizOption {

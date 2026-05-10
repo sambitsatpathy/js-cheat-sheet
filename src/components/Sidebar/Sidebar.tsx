@@ -23,7 +23,8 @@ const MODES: Record<Section, { id: Mode; label: string }[]> = {
   ],
   claude: [
     { id: 'study', label: 'Study Guide' },
-    { id: 'quiz', label: 'Quiz' },
+    { id: 'codeExamples', label: 'Code Examples' },
+    { id: 'quiz', label: 'Quiz (16 Q)' },
   ],
 };
 

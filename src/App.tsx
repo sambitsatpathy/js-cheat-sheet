@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import StudyView from './components/StudyView/StudyView';
 import FlashcardDeck from './components/FlashcardDeck/FlashcardDeck';
 import QuizEngine from './components/QuizEngine/QuizEngine';
+import CodeExamplesView from './components/CodeExamples/CodeExamplesView';
 import { jsQuestions } from './data/jsQuestions';
 import { reactQuestions } from './data/reactQuestions';
 import { claudeQuestions } from './data/claudeQuestions';
@@ -34,6 +35,10 @@ export default function App() {
 
     if (mode === 'quiz') {
       return <QuizEngine key="claude-quiz" questions={claudeQuestions} />;
+    }
+
+    if (mode === 'codeExamples') {
+      return <CodeExamplesView />;
     }
 
     return null;
