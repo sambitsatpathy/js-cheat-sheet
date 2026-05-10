@@ -1,5 +1,5 @@
-export type Section = 'javascript' | 'react';
-export type Mode = 'study' | 'flashcard' | 'quiz';
+export type Section = 'claude';
+export type Mode = 'study' | 'quiz';
 
 export interface AppView {
   section: Section;

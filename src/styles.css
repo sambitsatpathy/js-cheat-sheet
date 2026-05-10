@@ -1,9 +1,10 @@
 :root {
-  --color-bg: #0f1117;
-  --color-surface: #1a1d2e;
-  --color-surface-raised: #222540;
-  --color-border: #2d3148;
-  --color-accent: #6c63ff;
+  /* Impeccable: Using tinted neutrals and OKLCH-inspired colors */
+  --color-bg: #0a0b10; /* Deeper tinted neutral */
+  --color-surface: #12141c;
+  --color-surface-raised: #1a1d26;
+  --color-border: #232632;
+  --color-accent: #6366f1;
   --color-accent-hover: #8b85ff;
   --color-text: #e2e8f0;
   --color-text-muted: #94a3b8;
@@ -14,8 +15,9 @@
   --sidebar-width: 240px;
   --border-radius: 8px;
   --border-radius-sm: 4px;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  /* Impeccable: Fluid type scale and optical sizing */
+  --font-sans: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
 }
 
 *, *::before, *::after {

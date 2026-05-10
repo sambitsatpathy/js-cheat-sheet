@@ -2,11 +2,10 @@ import { useState } from 'react';
 import type { AppView } from './types';
 import Sidebar from './components/Sidebar/Sidebar';
 import StudyView from './components/StudyView/StudyView';
-import FlashcardDeck from './components/FlashcardDeck/FlashcardDeck';
-import { jsQuestions } from './data/jsQuestions';
-import { reactQuestions } from './data/reactQuestions';
+import QuizEngine from './components/QuizEngine/QuizEngine';
+import { claudeQuestions } from './data/claudeQuestions';
 
-const DEFAULT_VIEW: AppView = { section: 'javascript', mode: 'study' };
+const DEFAULT_VIEW: AppView = { section: 'claude', mode: 'study' };
 
 export default function App() {
   const [view, setView] = useState<AppView>(DEFAULT_VIEW);
@@ -16,18 +15,14 @@ export default function App() {
   }
 
   function renderContent() {
-    const { section, mode } = view;
+    const { mode } = view;
 
     if (mode === 'study') {
-      const questions =
-        section === 'javascript' ? jsQuestions : reactQuestions;
-      return <StudyView section={section} questions={questions} />;
+      return <StudyView />;
     }
 
-    if (mode === 'flashcard') {
-      const cards = section === 'javascript' ? jsQuestions : reactQuestions;
-      const label = section === 'javascript' ? 'JavaScript' : 'React';
-      return <FlashcardDeck key={section} cards={cards} section={label} />;
+    if (mode === 'quiz') {
+      return <QuizEngine key="claude-quiz" questions={claudeQuestions} />;
     }
 
     return null;
